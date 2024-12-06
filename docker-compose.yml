@@ -1,0 +1,28 @@
+version: "3.7"
+services:
+  mongo-ex1-service:
+    image: java/mongo-ex1-jvm
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+      - "5005:5005"
+    #environment:
+    depends_on:
+      - mongo-ex1-db
+
+  mongo-ex1-db:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
+    driver: local
+
