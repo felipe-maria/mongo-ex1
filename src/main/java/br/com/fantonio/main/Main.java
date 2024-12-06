@@ -1,6 +1,5 @@
 package br.com.fantonio.main;
 
-import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.Scanner;
 
