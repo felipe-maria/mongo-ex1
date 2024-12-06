@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args)  {
         // Usa o ClassLoader para obter o InputStream do arquivo
         InputStream inputStream = Main.class.getClassLoader().getResourceAsStream("ascii/fantonio.txt");
         // Verifica se o arquivo foi encontrado
