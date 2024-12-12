@@ -18,7 +18,7 @@ public class MongoConfig extends AbstractMongoClientConfiguration {
     }
 
     public MongoClient mongoClient() {
-        ConnectionString connectionString = new ConnectionString("mongodb://root:example@localhost:27017");
+        ConnectionString connectionString = new ConnectionString("mongodb://root:example@mongo-ex1-db:27017");
         MongoClientSettings mongoClientSettings = MongoClientSettings.builder()
                 .applyConnectionString(connectionString)
                 .build();

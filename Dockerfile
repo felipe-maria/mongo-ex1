@@ -3,7 +3,7 @@ FROM openjdk:17-oracle
 
 RUN mkdir app
 
-COPY target/mongo-ex1-1.0-SNAPSHOT.jar /app/app.jar
+COPY target/mongo-ex1-0.0.1-SNAPSHOT.jar /app/app.jar
 
 # Diretório de trabalho dentro do container
 WORKDIR /app
