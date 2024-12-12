@@ -1,7 +1,7 @@
-package br.com.fantonio.controller;
+package br.com.fantonio.mongo_ex1.controller;
 
-import br.com.fantonio.dto.UserDTO;
-import br.com.fantonio.service.UserService;
+import br.com.fantonio.mongo_ex1.controller.dto.UserDTO;
+import br.com.fantonio.mongo_ex1.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,7 +12,6 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-
     @PostMapping
     public void add(@RequestBody UserDTO userDTO){
         userService.add(userDTO);
@@ -20,19 +19,17 @@ public class UserController {
 
     @GetMapping("/{id}")
     public UserDTO find(@PathVariable String id){
-        userService.find(id);
-
-        return new UserDTO();
+        return userService.find(id);
     }
 
     @DeleteMapping("/{id}")
-    public void remove() {
-        System.out.println("Not implemented yet");
+    public void remove(@PathVariable String id) {
+        userService.remove(id);
     }
 
     @PutMapping("/{id}")
     public void update(@PathVariable String id, @RequestBody UserDTO userDTO){
-        System.out.println("Not implemented yet");
+        userService.update(id, userDTO);
     }
 
 }

@@ -1,4 +1,4 @@
-package br.com.fantonio;
+package br.com.fantonio.mongo_ex1.config;
 
 import com.mongodb.ConnectionString;
 import com.mongodb.MongoClientSettings;
@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.config.AbstractMongoClientConfiguration;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 @Configuration
-@EnableMongoRepositories(basePackages = "br.com.fantonio.repository")
+@EnableMongoRepositories(basePackages = "br.com.fantonio.mongo_ex1.repository")
 public class MongoConfig extends AbstractMongoClientConfiguration {
 
     @Override
