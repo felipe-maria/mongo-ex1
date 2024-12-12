@@ -13,8 +13,8 @@ public class UserServiceImpl implements UserService {
     private UserRepository userRepository;
 
     @Override
-    public void add(User user) {
-        userRepository.save(user);
+    public User add(User user) {
+        return userRepository.insert(user);
     }
 
     @Override
@@ -28,8 +28,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void update(String id, User user) {
-        userRepository.updateUser(id, user);
+    public User update(String id, User user) {
+        return userRepository.update(id, user);
     }
 
 }

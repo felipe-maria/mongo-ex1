@@ -19,10 +19,12 @@ public class UserController {
     private UserDtoMapper userDtoMapper;
 
     @PostMapping
-    public void add(@RequestBody UserDTO userDTO){
+    public UserDTO add(@RequestBody UserDTO userDTO){
 
-        User user = userDtoMapper.convert2Entity(userDTO);
-        userService.add(user);
+        User inputUser = userDtoMapper.convert2Entity(userDTO);
+        User outputUser = userService.add(inputUser);
+
+        return userDtoMapper.convert2Dto(outputUser);
     }
 
     @GetMapping("/{id}")
@@ -39,9 +41,11 @@ public class UserController {
     }
 
     @PutMapping("/{id}")
-    public void update(@PathVariable String id, @RequestBody UserDTO userDTO){
-        User user = userDtoMapper.convert2Entity(userDTO);
-        userService.update(id, user);
+    public UserDTO update(@PathVariable String id, @RequestBody UserDTO userDTO){
+        User inputUser = userDtoMapper.convert2Entity(userDTO);
+        User outputUser = userService.update(id, inputUser);
+
+        return userDtoMapper.convert2Dto(outputUser);
     }
 
 }

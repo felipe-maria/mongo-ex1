@@ -17,7 +17,7 @@ public class UserDocumentRepository implements UserRepository {
     private UserDocumentMapper userDocumentMapper;
 
     @Override
-    public User save(User user) {
+    public User insert(User user) {
         UserDocument userDocument = userDocumentMapper.convert2Document(user);
 
         return userDocumentMapper.convert2Entity(repository.save(userDocument));
@@ -37,7 +37,7 @@ public class UserDocumentRepository implements UserRepository {
     }
 
     @Override
-    public User updateUser(String id, User user) {
+    public User update(String id, User user) {
         UserDocument userDocument = userDocumentMapper.convert2Document(user);
         userDocument.setId(id);
 
