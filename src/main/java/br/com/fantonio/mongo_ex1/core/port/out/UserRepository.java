@@ -2,14 +2,13 @@ package br.com.fantonio.mongo_ex1.core.port.out;
 
 import br.com.fantonio.mongo_ex1.core.domain.entity.User;
 
-import java.util.Optional;
-
-public interface UserRepositoryPort {
+public interface UserRepository {
 
     User save(User user);
 
-    Optional<User> findById(String id);
+    User findById(String id);
 
     void deleteById(String id);
 
+    User updateUser(String id, User user);
 }

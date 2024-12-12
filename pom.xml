@@ -37,16 +37,6 @@
             <scope>test</scope>
         </dependency>
 
-
-<!--        -->
-<!--        &lt;!&ndash; https://mvnrepository.com/artifact/org.mongodb/mongodb-driver-sync &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>org.mongodb</groupId>-->
-<!--            <artifactId>mongodb-driver-sync</artifactId>-->
-<!--            <version>5.2.1</version>-->
-<!--        </dependency>-->
-
-
     </dependencies>
 
     <build>
