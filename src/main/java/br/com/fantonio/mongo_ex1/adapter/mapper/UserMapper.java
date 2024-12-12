@@ -1,7 +1,7 @@
-package br.com.fantonio.mongo_ex1.mapper;
+package br.com.fantonio.mongo_ex1.adapter.mapper;
 
-import br.com.fantonio.mongo_ex1.controller.dto.UserDTO;
-import br.com.fantonio.mongo_ex1.entity.User;
+import br.com.fantonio.mongo_ex1.adapter.inbound.api.dto.UserDTO;
+import br.com.fantonio.mongo_ex1.core.domain.entity.User;
 import org.springframework.stereotype.Component;
 
 @Component
